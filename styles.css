@@ -1,0 +1,69 @@
+:root {
+	--background-color: rgb(191, 209, 229);
+	--mainBackground-color: rgb(166, 189, 219);
+
+	--border-color: rgb(217, 229, 240);
+/*	--inputBorder-color: rgb(80, 133, 188);*/
+
+/*	--buttonBackground-color: rgb(104, 149, 197);*/
+/*	--buttonHoverBackground-color: rgb(166, 189, 219);*/
+/*	--buttonText-color: rgb(217, 229, 240);*/
+
+	--tileBackground-color: rgb(128, 166, 206);
+
+	--headerText-color: rgb(8, 96, 168);
+/*	--inputText-color: rgb(45, 114, 178);*/
+	--regularText-color: rgb(80, 133, 188);
+}
+
+body {
+	background: var(--background-color);
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.loading {
+	background: var(--mainBackground-color);
+	border: 3px solid var(--border-color);
+	border-radius: 5%;
+	width: 300px;
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.loading__text {
+	color: var(--headerText-color);
+	line-height: 1.4;
+	font-size: 1.2rem;
+	font-weight: bold;
+	text-align: center;
+}
+
+.loading__author {
+	color: var(--regularText-color);
+	font-size: 0.9rem;
+	font-weight: normal;
+	margin: 0.6rem 0 2rem 0;
+	display: block;
+}
+
+.loading__anim {
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	border: 5px solid var(--tileBackground-color);
+	border-top-color: var(--headerText-color);
+	border-left-color: var(--headerText-color);
+	animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(-360deg);
+	}
+}
